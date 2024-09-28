@@ -1,0 +1,65 @@
+---
+compiled_package_info:
+  package_name: EnvironmentContracts
+  address_alias_instantiation:
+    Deployer: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+    DesertContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+    Extensions: "0000000000000000000000000000000000000000000000000000000000000001"
+    ForestContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+    OceanContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+    SpaceContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+    aptos_framework: "0000000000000000000000000000000000000000000000000000000000000001"
+    aptos_fungible_asset: 000000000000000000000000000000000000000000000000000000000000000a
+    aptos_std: "0000000000000000000000000000000000000000000000000000000000000001"
+    aptos_token: "0000000000000000000000000000000000000000000000000000000000000003"
+    core_resources: 000000000000000000000000000000000000000000000000000000000a550c18
+    std: "0000000000000000000000000000000000000000000000000000000000000001"
+    vm: "0000000000000000000000000000000000000000000000000000000000000000"
+    vm_reserved: "0000000000000000000000000000000000000000000000000000000000000000"
+  source_digest: 39ABD8EC3224ECBB43561F6E9E3FFFE63D5BF4E86698864309AA5C13FEE77666
+  build_flags:
+    dev_mode: false
+    test_mode: false
+    override_std: ~
+    generate_docs: false
+    generate_abis: false
+    generate_move_model: true
+    full_model_generation: false
+    install_dir: ~
+    force_recompilation: false
+    additional_named_addresses:
+      DesertContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+      ForestContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+      OceanContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+      SpaceContract: a6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc
+    architecture: ~
+    fetch_deps_only: false
+    skip_fetch_latest_git_deps: false
+    compiler_config:
+      bytecode_version: 6
+      known_attributes:
+        - bytecode_instruction
+        - deprecated
+        - event
+        - expected_failure
+        - "fmt::skip"
+        - legacy_entry_fun
+        - "lint::allow_unsafe_randomness"
+        - "lint::skip"
+        - native_interface
+        - randomness
+        - resource_group
+        - resource_group_member
+        - test
+        - test_only
+        - verify_only
+        - view
+      skip_attribute_checks: false
+      compiler_version: ~
+      language_version: ~
+      experiments:
+        - optimize=on
+dependencies:
+  - AptosFramework
+  - AptosStdlib
+  - MoveStdlib

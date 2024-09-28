@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desert - MusiCoinCity</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.gif-container {
+			flex-basis: 70%;
+			background: linear-gradient(to bottom right, #ffffff, #653200);
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.gif-container img {
+			max-width: 80%;
+			max-height: 80%;
+		}
+		.button-container {
+			flex-basis: 30%;
+			background: linear-gradient(to top right, #653200, #ffffff);
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.button-container button {
+			margin-bottom: 20px;
+			padding: 10px 20px;
+			font-size: 1.2rem;
+			border-radius: 5px;
+			border: none;
+			color: #ffffff;
+			background-color: #333333;
+			cursor: pointer;
+		}
+		@media only screen and (max-width: 768px) {
+		.gif-container {
+			flex-basis: 100%;
+			height: 50vh;
+		}
+		.button-container {
+			flex-basis: 100%;
+			height: 50vh;
+		}
+		.bottom-buttons {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			height: auto;
+			padding: 20px 0;
+		}
+		.bottom-buttons button {
+			margin: 10px 0;
+		}
+		.donation {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+		.donation label {
+			margin-right: 0;
+			margin-bottom: 5px;
+			margin-top: 10px;
+		}
+		#donation-input {
+			width: 100%;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+		}
+
+		.bottom-buttons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			bottom: 0;
+			width: 100%;
+			background-color: #653200;
+			padding: 10px;
+			}
+
+			.bottom-buttons button {
+			margin: 0 10px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			background-color: #001e89;
+			color: white;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}
+
+			.bottom-buttons button:hover {
+			background-color: #010041;
+			}
+
+			.donation {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 10px;
+			}
+
+			.donation label {
+			margin-right: 10px;
+			font-size: 1rem;
+			}
+
+			.donation input {
+			flex: 1;
+			font-size: 1rem;
+			padding: 5px;
+			border-radius: 5px;
+			border: none;
+			}
+			#donation-input {
+			width: 100px;
+			}
+
+			.question-mark {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background-color: #ffffff;
+				border-radius: 50%;
+				text-align: center;
+				color: #333333;
+				font-weight: bold;
+				cursor: pointer;
+				margin-left: 5px;
+			}
+
+			.question-mark:hover {
+				background-color: #333333;
+				color: #ffffff;
+			}
+
+			.question-mark {
+				position: relative;
+			}
+
+			.question-mark:hover::after {
+				content: "Sahara Conservation exists to conserve the wildlife of the Sahara and bordering Sahelian grasslands, together with the diverse landscapes required for its survival of the region’s embattled fauna and flora.";
+				position: absolute;
+				bottom: 50px;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: #333333;
+				color: #ffffff;
+				padding: 10px;
+				border-radius: 5px;
+				font-size: 0.8rem;
+				white-space: normal;
+				width: 100px;
+				text-align: center;
+				line-height: 1.4;
+			}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="gif-container">
+			<img src="desert.gif" alt="gif">
+		</div>
+		<div class="button-container" 	style="font-family: comic sans ms;">
+			<audio id="audio1" src="desert/sand-storm.mp3" autoplay loop></audio>
+			<label for="volume-slider1">Sand storm:</label>
+			<input type="range" id="volume-slider1" min="0" max="1" step="0.1" value="1">
+
+			<audio id="audio2" src="desert/bazaar.mp3" autoplay loop></audio>
+			<label for="volume-slider2">Bazaar:</label>
+			<input type="range" id="volume-slider2" min="0" max="1" step="0.1" value="1">
+
+			<audio id="audio3" src="desert/cricket.mp3" autoplay loop></audio>
+			<label for="volume-slider3">Cricket:</label>
+			<input type="range" id="volume-slider3" min="0" max="1" step="0.1" value="1">
+
+			<audio id="audio4" src="desert/foot-steps.mp3" autoplay loop></audio>
+			<label for="volume-slider4">Foot steps:</label>
+			<input type="range" id="volume-slider4" min="0" max="1" step="0.1" value="1">
+
+			<audio id="audio5" src="desert/lizard-eating.mp3" autoplay loop></audio>
+			<label for="volume-slider5">Lizard:</label>
+			<input type="range" id="volume-slider5" min="0" max="1" step="0.1" value="1">
+
+			<audio id="audio6" src="desert/dark-background.mp3" autoplay loop></audio>
+			<label for="volume-slider6">Dark background:</label>
+			<input type="range" id="volume-slider6" min="0" max="1" step="0.1" value="1">
+		</div>
+		<div class="bottom-buttons">         
+			<button class="enablePetraButton btn">Connect Wallet</button>    
+			<div class="donation">
+				<label for="donation-input">Amount:</label>
+				<input type="number" id="donation-input" value="0.02">
+			</div>
+			<button class="sendAPTButton btn">Donate APT to Amazon Watch <span class="question-mark">?</span></button>
+		</div>
+	</div>
+	<script>
+		const audio1 = document.getElementById("audio1");
+		const audio2 = document.getElementById("audio2");
+		const audio3 = document.getElementById("audio3");
+		const audio4 = document.getElementById("audio4");
+		const audio5 = document.getElementById("audio5");
+		const audio6 = document.getElementById("audio6");
+  
+		const volumeSlider1 = document.getElementById("volume-slider1");
+		const volumeSlider2 = document.getElementById("volume-slider2");
+		const volumeSlider3 = document.getElementById("volume-slider3");
+		const volumeSlider4 = document.getElementById("volume-slider4");
+		const volumeSlider5 = document.getElementById("volume-slider5");
+		const volumeSlider6 = document.getElementById("volume-slider6");
+
+		audio1.volume = 0.5; // Set the volume of the first audio to 0.5
+		audio2.volume = 0.2; // Set the volume of the second audio to 0.2
+		audio3.volume = 0; // Mute the third audio
+		audio4.volume = 0; // Mute the fourth audio
+		audio5.volume = 0; // Mute the fifth audio
+		audio6.volume = 0; // Mute the sixth audio
+
+		volumeSlider1.value = audio1.volume; // Set the value of the first slider to match the initial volume
+		volumeSlider2.value = audio2.volume; // Set the value of the second slider to match the initial volume
+		volumeSlider3.value = audio3.volume; // Set the value of the third slider to match the initial volume
+		volumeSlider4.value = audio4.volume; // Set the value of the fourth slider to match the initial volume
+		volumeSlider5.value = audio5.volume; // Set the value of the fifth slider to match the initial volume
+		volumeSlider6.value = audio6.volume; // Set the value of the sixth slider to match the initial volume
+  
+		volumeSlider1.addEventListener("input", () => {
+		  audio1.volume = volumeSlider1.value;
+		});
+  
+		volumeSlider2.addEventListener("input", () => {
+		  audio2.volume = volumeSlider2.value;
+		});
+  
+		volumeSlider3.addEventListener("input", () => {
+		  audio3.volume = volumeSlider3.value;
+		});
+  
+		volumeSlider4.addEventListener("input", () => {
+		  audio4.volume = volumeSlider4.value;
+		});
+
+		volumeSlider5.addEventListener("input", () => {
+		  audio5.volume = volumeSlider5.value;
+		});
+
+		volumeSlider6.addEventListener("input", () => {
+		  audio6.volume = volumeSlider6.value;
+		});
+
+		const petraButton = document.querySelector('.enablePetraButton');
+        const sendAPTButton = document.querySelector('.sendAPTButton');
+        const donationInput = document.querySelector('#donation-input');
+
+        let aptosAccount = null;
+        let targetAddress = '0xb2033f3c854e54cb7cd1a2ee1f5bae39ec859b3734c071e4330208099204bb7b'; 
+
+        // Connect to Petra Wallet
+        petraButton.addEventListener('click', async () => {
+            if (typeof window.aptos !== 'undefined') {
+                try {
+                    const response = await window.aptos.connect();
+                    aptosAccount = response.address;
+                    alert("Connected to Petra Wallet");
+                    petraButton.style.display = 'none';  // Hide the button after connection
+                } catch (error) {
+                    console.error('Error connecting to Petra Wallet:', error);
+                }
+            } else {
+                alert('Please install the Petra Wallet extension to continue.');
+                window.open('https://petra.app/', '_blank');
+            }
+        });
+
+        // Sending APT to the recipient
+        sendAPTButton.addEventListener('click', async () => {
+            const donationAmount = parseFloat(donationInput.value);
+            const amountInOctas = (donationAmount * 1e8).toString();  // Convert APT to octas (1 APT = 100 million octas)
+
+            if (!aptosAccount) {
+                alert('Please connect your wallet first!');
+                return;
+            }
+
+            const transaction = {
+                type: "entry_function_payload",
+                function: "0x1::coin::transfer",
+                arguments: [targetAddress, amountInOctas],
+                type_arguments: ["0x1::aptos_coin::AptosCoin"]
+            };
+
+            try {
+                const response = await window.aptos.signAndSubmitTransaction(transaction);
+                console.log('Transaction sent:', response.hash);
+                alert('Transaction successful! Hash: ' + response.hash);
+            } catch (error) {
+                console.error('Transaction failed:', error);
+            }
+        });
+	</script>
+</body>
+</html>

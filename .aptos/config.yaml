@@ -1,0 +1,6 @@
+profiles:
+  default:
+    private_key: "0x000"
+    public_key: "0x000"
+    account: "0xa6356966eb0b3d7cc1ff15a9a5b11026c577ea896609befd6e939fa7c796d8cc"
+    rest_url: "https://fullnode.mainnet.aptoslabs.com/v1"
